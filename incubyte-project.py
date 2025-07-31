@@ -1,2 +1,2 @@
-def add(numbers: str) -> int:
-    return 0
+def test_single_number():
+    assert add("1") == 1
