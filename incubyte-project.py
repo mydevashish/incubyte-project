@@ -5,9 +5,9 @@ def add(numbers: str) -> int:
     parts = numbers.split(",")
     return sum(int(p) for p in parts)
 
-def test_newline_and_comma_delimiters():
-    print(add("1\n2,3") == 6)
-    assert add("1\n2,3") == 6
+def test_custom_delimiter_semicolon():
+    print(add("//;\n1;2") == 3)
+    assert add("//;\n1;2") == 3
 
 if __name__ == "__main__":
-    test_newline_and_comma_delimiters()
+    test_custom_delimiter_semicolon()
