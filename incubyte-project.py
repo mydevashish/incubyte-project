@@ -19,11 +19,11 @@ def add(numbers: str) -> int:
 
     return sum(nums)
 
-def test_negative_number_raises_exception():
+def test_multiple_negatives_raise_all():
     with pytest.raises(Exception) as exc:
-        add("1,-2,3")
-    assert str(exc.value) == "negative numbers not allowed -2"
+        add("1,-2,-4,3")
+    assert str(exc.value) == "negative numbers not allowed -2,-4"
 
 
 if __name__ == "__main__":
-    test_negative_number_raises_exception()
+    test_multiple_negatives_raise_all()
