@@ -4,9 +4,9 @@ def add(numbers: str) -> int:
     parts = numbers.split(",")
     return sum(int(p) for p in parts)
 
-def test_multiple_numbers_return_sum():
-    print(add("1,2,3,4") == 10)
-    assert add("1,2,3,4") == 10
+def test_newline_and_comma_delimiters():
+    print(add("1\n2,3") == 6)
+    assert add("1\n2,3") == 6
 
 if __name__ == "__main__":
-    test_multiple_numbers_return_sum()
+    test_newline_and_comma_delimiters()
