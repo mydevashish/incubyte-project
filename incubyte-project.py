@@ -1,7 +1,8 @@
 def add(numbers: str) -> int:
     if not numbers:
         return 0
-    return int(numbers)
+    parts = numbers.split(",")
+    return sum(int(p) for p in parts)
 
 def test_two_numbers():
     print(add("1,2") == 3)
