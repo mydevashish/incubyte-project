@@ -1,5 +1,5 @@
 def add(numbers: str) -> int:
-    if numbers == "":
+    if not numbers:
         return 0
     return int(numbers)
 
